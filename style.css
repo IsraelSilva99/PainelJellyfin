@@ -1,0 +1,128 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #141414;
+    color: #ffffff;
+    overflow-x: hidden;
+}
+
+header {
+    background-color: #141414;
+    padding: 10px 0;
+}
+
+.btn-lg {
+    font-size: 1.25rem;
+    padding: 12px 25px;
+}
+
+.hero {
+    background: linear-gradient(to right, rgba(0,0,0,0.8), rgba(20,20,20,0.8)), url('https://cdn.pixabay.com/photo/2020/05/17/18/30/movie-5182196_960_720.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero h1, .hero p {
+    color: #ffffff;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+}
+
+.features {
+    background-color: #141414;
+}
+
+.feature-card {
+    border: none;
+    transition: transform 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: scale(1.05);
+}
+
+.btn-danger {
+    background-color: #e50914;
+    border-color: #e50914;
+    transition: background-color 0.3s ease;
+}
+
+.btn-danger:hover {
+    background-color: #b20710;
+}
+
+.modal-content {
+    background-color: #333;
+    border: none;
+}
+
+.loader {
+    border: 8px solid #f3f3f3;
+    border-top: 8px solid #e50914;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+    margin: auto;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .btn-lg {
+        font-size: 1rem;
+        padding: 10px 20px;
+    }
+
+    .hero {
+        height: 60vh; /* Reduz a altura da seção hero em telas menores */
+    }
+
+    .hero h1 {
+        font-size: 2rem; /* Ajusta o tamanho da fonte do título */
+    }
+
+    .hero p {
+        font-size: 1rem; /* Ajusta o tamanho da fonte do parágrafo */
+    }
+
+    .feature-card {
+        margin-bottom: 20px; /* Adiciona espaçamento entre os cards */
+    }
+}
+
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 1.5rem; /* Ajusta ainda mais para telas muito pequenas */
+    }
+
+    .hero p {
+        font-size: 0.9rem; /* Ajusta o texto ainda mais */
+    }
+
+    .btn-lg {
+        padding: 8px 15px; /* Reduz o padding em telas pequenas */
+    }
+}
+
+@media (max-width: 576px) {
+    header .btn {
+        width: 100%; /* Botões ocupam 100% da largura em telas pequenas */
+        margin-bottom: 10px; /* Espaço entre os botões */
+    }
+
+    .hero h1 {
+        font-size: 2rem; /* Diminuir o tamanho da fonte em telas pequenas */
+    }
+
+    .hero p {
+        font-size: 1rem; /* Diminuir o tamanho da fonte em telas pequenas */
+    }
+}
